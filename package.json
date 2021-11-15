@@ -1,0 +1,21 @@
+{
+  "name": "@ccf/pkg-cli",
+  "version": "1.0.0",
+  "description": "一个批量安装、删除、更新 node_modules 依赖的命令行工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/ccfnever/-ccf-pkg-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "pkg",
+    "package",
+    "npm"
+  ],
+  "author": "ccfnever",
+  "license": "ISC"
+}

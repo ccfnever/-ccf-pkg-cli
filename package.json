@@ -2,7 +2,10 @@
   "name": "@ccf/pkg-cli",
   "version": "1.0.0",
   "description": "一个批量安装、删除、更新 node_modules 依赖的命令行工具",
-  "main": "index.js",
+  "main": "src/index.js",
+  "bin": {
+    "pkg-cli": "src/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +20,11 @@
     "npm"
   ],
   "author": "ccfnever",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "glob": "^7.2.0",
+    "inquirer": "^8.2.0",
+    "yargs": "16"
+  }
 }

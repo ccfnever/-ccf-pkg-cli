@@ -48,5 +48,6 @@ module.exports = {
   getPkg,
   getProjectDir,
   getNodeModules,
-  exec
+  exec,
+  cwd
 }

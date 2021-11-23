@@ -1,0 +1,11 @@
+这是一个批量安装、删除、更新 node_modules 依赖的命令行工具，当然你也可以自定义指令批量执行!
+Usage: pkg-cli <command> [options]
+
+Commands：
+  pkg-cli install -d [dir] -yml [yml-file]     安装依赖，默认当前目录，可指定目录，可使用 yml 文件配置
+  pkg-cli remove -d [dir]  -yml [yml-file]     删除依赖，默认当前目录，可指定目录，可使用 yml 文件配置        
+  pkg-cli update -d [dir]  -yml [yml-file]     更新依赖，默认当前目录，可指定目录，可使用 yml 文件配置
+
+Options：
+  --help      
+  --version  

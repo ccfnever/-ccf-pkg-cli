@@ -16,10 +16,9 @@ const rootDir = argv.d
 // -f 当为 true ，install 时会清空 node_modules、yarn.lock、package-lock.json
 const force = argv.f
 
-console.log('----', argv)
+const customReg = argv.reg
 // console.log('----', command)
 // console.log('----rootDir', rootDir)
-// return
 const run = () => {
 
   if (typeof rootDir === 'boolean') {
@@ -40,7 +39,7 @@ const run = () => {
         Logs.error(`请输入合法命令，如: pkg-cli sh 'ls -l'`)
         return
       }
-      sh(rootDir, argv._[1])
+      sh(rootDir, argv._[1], customReg)
       break;
     default:
       help()

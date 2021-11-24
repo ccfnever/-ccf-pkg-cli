@@ -36,6 +36,17 @@ const getNodeModules = (root) => {
   return files.map(c => c.replace('package.json', 'node_modules/'))
 }
 
+/**
+ * @param root string 查询起始目录,默认 process.cwd()
+ * @returns string[] node_modules 目录
+ */
+const getCustomDir = (root, reg) => {
+  const realPath = root ? path.resolve(cwd, root) : cwd
+  const files = glob.sync(`${realPath}/**/${reg}`, {
+    realpath: true
+  })
+  return files
+}
 
 const exec = async (cmd, option, silent) => {
   await runCmd(cmd, {
@@ -49,5 +60,6 @@ module.exports = {
   getProjectDir,
   getNodeModules,
   exec,
-  cwd
+  cwd,
+  getCustomDir
 }

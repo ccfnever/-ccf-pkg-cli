@@ -5,6 +5,7 @@ Commands：
   pkg-cli install -d [dir] -yml [yml-file]     安装依赖，默认当前目录，可指定目录，可使用 yml 文件配置
   pkg-cli remove -d [dir]  -yml [yml-file]     删除依赖，默认当前目录，可指定目录，可使用 yml 文件配置        
   pkg-cli update -d [dir]  -yml [yml-file]     更新依赖，默认当前目录，可指定目录，可使用 yml 文件配置
+  pkg-cli sh command -d [dir]  -yml [yml-file] 自定义执行 shell 命令
 
 Options：
   --help      

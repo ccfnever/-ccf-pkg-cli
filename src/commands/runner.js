@@ -4,7 +4,7 @@ const chalk = require('chalk')
 
 module.exports = function runCmd(cmd, option, silent = false) {
   console.log(chalk.yellow(`=========== 开始执行 ${cmd} 命令 ==========`))
-  console.log(chalk.yellow(`执行路径：${option.cwd}`))
+  console.log(`执行路径：${option.cwd}`)
 
   if (process.platform === 'win32') {
     cmd = '@chcp 65001 >nul & cmd /d/s/c ' + cmd
@@ -22,7 +22,6 @@ module.exports = function runCmd(cmd, option, silent = false) {
       })
 
       proc.on('close', () => {
-        console.log(chalk.yellow(`=========== ${cmd} 命令执行结束 ==========`))
         resolve()
       })
 

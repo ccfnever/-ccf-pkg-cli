@@ -4,6 +4,7 @@ const yargs = require('yargs');
 const Logs = require('./Logs')
 const install = require('./commands/install')
 const remove = require('./commands/remove')
+const sh = require('./commands/sh')
 const help = require('./commands/help')
 
 const argv = yargs.argv;
@@ -15,10 +16,10 @@ const rootDir = argv.d
 // -f 当为 true ，install 时会清空 node_modules、yarn.lock、package-lock.json
 const force = argv.f
 
-// console.log('----', argv)
+console.log('----', argv)
 // console.log('----', command)
 // console.log('----rootDir', rootDir)
-
+// return
 const run = () => {
 
   if (typeof rootDir === 'boolean') {
@@ -33,6 +34,13 @@ const run = () => {
       break;
     case "remove":
       remove(rootDir, force)
+      break;
+    case "sh":
+      if (typeof argv._[1] !== 'string') {
+        Logs.error(`请输入合法命令，如: pkg-cli sh 'ls -l'`)
+        return
+      }
+      sh(rootDir, argv._[1])
       break;
     default:
       help()

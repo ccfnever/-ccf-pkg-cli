@@ -1,7 +1,7 @@
-# @ccf/pkg-cli
+# ccf-pkg-cli
 
 ## 简介
-`@ccf/pkg-cli` 是一个批量安装、删除、更新 node_modules 依赖的命令行工具。
+`ccf-pkg-cli` 是一个批量安装、删除、更新 node_modules 依赖的命令行工具。
 
 主要是为了方便以下场景的使用：
 - 初始化一个项目，而它有多个文件夹需要安装依赖
@@ -14,7 +14,7 @@ todo:
 yml 配置化功能还没加入，目的是为了批量处理一下散乱的项目，等有时间再搞 ：）
 ## 安装
 ```
-npm install -g @ccf/pkg-cli
+npm install -g ccf-pkg-cli
 ```
 
 ## 使用

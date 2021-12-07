@@ -1,5 +1,5 @@
 {
-  "name": "@ccf/pkg-cli",
+  "name": "ccf-pkg-cli",
   "version": "1.1.0",
   "description": "一个批量安装、删除、更新 node_modules 依赖的命令行工具",
   "main": "src/index.js",
